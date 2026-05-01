@@ -1,0 +1,93 @@
+{
+  "sample_invoice_clean.pdf": {
+    "invoice_number": "INV-2026-1042",
+    "vendor_name": "Northstar Analytics LLC",
+    "customer_name": "Finch & Sparrow Ltd.",
+    "invoice_date": "2026-05-01",
+    "due_date": "2026-05-16",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Document extraction workflow setup",
+        "quantity": 3,
+        "unit_price": 175.0,
+        "total": 525.0
+      },
+      {
+        "description": "Validation rules configuration",
+        "quantity": 2,
+        "unit_price": 140.0,
+        "total": 280.0
+      },
+      {
+        "description": "QA report dashboard polish",
+        "quantity": 1,
+        "unit_price": 195.0,
+        "total": 195.0
+      }
+    ],
+    "subtotal": 1000.0,
+    "tax": 80.0,
+    "total": 1080.0
+  },
+  "sample_invoice_missing_due_date.pdf": {
+    "invoice_number": "INV-2026-1043",
+    "vendor_name": "Northstar Analytics LLC",
+    "customer_name": "Finch & Sparrow Ltd.",
+    "invoice_date": "2026-05-02",
+    "due_date": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Invoice parser integration",
+        "quantity": 2,
+        "unit_price": 210.0,
+        "total": 420.0
+      },
+      {
+        "description": "Schema validation pass",
+        "quantity": 1,
+        "unit_price": 290.0,
+        "total": 290.0
+      }
+    ],
+    "subtotal": 710.0,
+    "tax": 56.8,
+    "total": 766.8
+  },
+  "sample_invoice_math_mismatch.pdf": {
+    "invoice_number": "INV-2026-1044",
+    "vendor_name": "Northstar Analytics LLC",
+    "customer_name": "Finch & Sparrow Ltd.",
+    "invoice_date": "2026-05-03",
+    "due_date": "2026-05-18",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "PDF extraction prompt tuning",
+        "quantity": 4,
+        "unit_price": 125.0,
+        "total": 500.0
+      },
+      {
+        "description": "Error classification rules",
+        "quantity": 2,
+        "unit_price": 150.0,
+        "total": 250.0
+      },
+      {
+        "description": "Result review session",
+        "quantity": 1,
+        "unit_price": 100.0,
+        "total": 100.0
+      }
+    ],
+    "subtotal": 900.0,
+    "tax": 72.0,
+    "total": 950.0
+  },
+  "_notes": {
+    "sample_invoice_missing_due_date.pdf": "Due date is intentionally absent from the PDF. A strict extractor should return null for due_date.",
+    "sample_invoice_math_mismatch.pdf": "Second line item total and invoice grand total are intentionally inconsistent."
+  }
+}

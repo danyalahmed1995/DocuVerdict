@@ -1,0 +1,241 @@
+{
+  "timestamp": "2026-05-01T09:15:29.788Z",
+  "fileName": "sample_invoice_math_mismatch.pdf",
+  "extracted": {
+    "invoice_number": "INV-2026-1044",
+    "vendor_name": "Northstar Analytics LLC",
+    "customer_name": "Finch & Sparrow Ltd.",
+    "invoice_date": "2026-05-03",
+    "due_date": "2026-05-18",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "PDF extraction prompt tuning",
+        "quantity": 4,
+        "unit_price": 125,
+        "total": 500
+      },
+      {
+        "description": "Error classification rules",
+        "quantity": 2,
+        "unit_price": 150,
+        "total": 250
+      },
+      {
+        "description": "Result review session",
+        "quantity": 1,
+        "unit_price": 100,
+        "total": 100
+      }
+    ],
+    "subtotal": 900,
+    "tax": 72,
+    "total": 950
+  },
+  "qa": {
+    "score": 87,
+    "grade": "Good",
+    "documentFit": {
+      "status": "Looks like invoice",
+      "warning": null
+    },
+    "issues": [
+      {
+        "severity": "warning",
+        "path": "line_items[1]",
+        "message": "line_items[1]: quantity * unit_price (300.00) does not match total (250.00)."
+      },
+      {
+        "severity": "warning",
+        "path": "total",
+        "message": "subtotal + tax (972.00) does not match total (950.00)."
+      }
+    ],
+    "missingFields": [],
+    "unexpectedFields": [],
+    "typeMismatches": [],
+    "validationErrors": [],
+    "mathInconsistencies": [
+      "line_items[1]: quantity * unit_price (300.00) does not match total (250.00).",
+      "subtotal + tax (972.00) does not match total (950.00)."
+    ]
+  },
+  "groundTruth": {
+    "enabled": true,
+    "matchPercentage": 100,
+    "matchedFields": 21,
+    "mismatchedFields": 0,
+    "missingFields": 0,
+    "extraFields": 0,
+    "issues": [
+      {
+        "path": "invoice_number",
+        "severity": "info",
+        "type": "match",
+        "expected": "INV-2026-1044",
+        "actual": "INV-2026-1044",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "vendor_name",
+        "severity": "info",
+        "type": "match",
+        "expected": "Northstar Analytics LLC",
+        "actual": "Northstar Analytics LLC",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "customer_name",
+        "severity": "info",
+        "type": "match",
+        "expected": "Finch & Sparrow Ltd.",
+        "actual": "Finch & Sparrow Ltd.",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "invoice_date",
+        "severity": "info",
+        "type": "match",
+        "expected": "2026-05-03",
+        "actual": "2026-05-03",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "due_date",
+        "severity": "info",
+        "type": "match",
+        "expected": "2026-05-18",
+        "actual": "2026-05-18",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "currency",
+        "severity": "info",
+        "type": "match",
+        "expected": "USD",
+        "actual": "USD",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[0].description",
+        "severity": "info",
+        "type": "match",
+        "expected": "PDF extraction prompt tuning",
+        "actual": "PDF extraction prompt tuning",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[0].quantity",
+        "severity": "info",
+        "type": "match",
+        "expected": 4,
+        "actual": 4,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[0].unit_price",
+        "severity": "info",
+        "type": "match",
+        "expected": 125,
+        "actual": 125,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[0].total",
+        "severity": "info",
+        "type": "match",
+        "expected": 500,
+        "actual": 500,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[1].description",
+        "severity": "info",
+        "type": "match",
+        "expected": "Error classification rules",
+        "actual": "Error classification rules",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[1].quantity",
+        "severity": "info",
+        "type": "match",
+        "expected": 2,
+        "actual": 2,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[1].unit_price",
+        "severity": "info",
+        "type": "match",
+        "expected": 150,
+        "actual": 150,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[1].total",
+        "severity": "info",
+        "type": "match",
+        "expected": 250,
+        "actual": 250,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[2].description",
+        "severity": "info",
+        "type": "match",
+        "expected": "Result review session",
+        "actual": "Result review session",
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[2].quantity",
+        "severity": "info",
+        "type": "match",
+        "expected": 1,
+        "actual": 1,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[2].unit_price",
+        "severity": "info",
+        "type": "match",
+        "expected": 100,
+        "actual": 100,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "line_items[2].total",
+        "severity": "info",
+        "type": "match",
+        "expected": 100,
+        "actual": 100,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "subtotal",
+        "severity": "info",
+        "type": "match",
+        "expected": 900,
+        "actual": 900,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "tax",
+        "severity": "info",
+        "type": "match",
+        "expected": 72,
+        "actual": 72,
+        "message": "Field matches expected JSON."
+      },
+      {
+        "path": "total",
+        "severity": "info",
+        "type": "match",
+        "expected": 950,
+        "actual": 950,
+        "message": "Field matches expected JSON."
+      }
+    ]
+  }
+}
