@@ -79,13 +79,9 @@ Download a full analysis report including:
 
 ## 🧠 Why This Matters
 
-Most tools stop at:
-
 ```
 PDF → JSON
 ```
-
-DocuVerdict goes further:
 
 ```
 JSON → Validate → Verify → Score → Explain
@@ -218,10 +214,3 @@ This is critical for real-world systems.
 ## 📄 License
 
 MIT License
-
----
-
-## 💡 Positioning
-
-> DocuVerdict is not a PDF parser.  
-> It is a **trust layer for AI-generated structured data**.
