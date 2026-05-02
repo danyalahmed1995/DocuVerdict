@@ -97,16 +97,16 @@ It detects:
 ## 🖼️ Demo
 
 ### ✅ Clean Invoice
-![Clean Invoice](./public/demo/clean.png)
+![Clean Invoice](.assets/clean.png)
 
 ### ⚠️ Missing Field
-![Missing Field](./public/demo/missing.png)
+![Missing Field](./assets/missing.png)
 
 ### 🧮 Math Mismatch
-![Math Issue](./public/demo/math.png)
+![Math Issue](./assets/math.png)
 
 ### 🚫 Non-Invoice Detection
-![Non Invoice](./public/demo/non-invoice.png)
+![Non Invoice](./assets/non-invoice.png)
 
 ---
 
