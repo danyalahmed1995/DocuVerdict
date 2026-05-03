@@ -97,7 +97,7 @@ It detects:
 ## 🖼️ Demo
 
 ### ✅ Clean Invoice
-![Clean Invoice](.assets/clean.png)
+![Clean Invoice](./assets/clean.png)
 
 ### ⚠️ Missing Field
 ![Missing Field](./assets/missing.png)
